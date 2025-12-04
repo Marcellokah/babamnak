@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tökmagnak</title>
+
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&subset=latin,latin-ext&display=swap"
+        rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #1c1917;
+            /* Very Dark Stone/Brownish Black */
+            color: #d6d3d1;
+            /* Stone 300 */
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Glassmorphism Forest Style */
+        .glass-panel {
+            background: rgba(41, 37, 36, 0.6);
+            /* Stone 900 opacity */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* iOS Note Style - Dark Mode */
+        .ios-note {
+            background-color: #1c1c1e;
+            /* Apple Dark Mode Grey */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .ios-note-header {
+            border-bottom: 0.5px solid #38383a;
+        }
+
+        /* Custom Audio Range Slider (Greenish) */
+        input[type=range] {
+            -webkit-appearance: none;
+            background: transparent;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            background: #a8a29e;
+            /* Stone 400 */
+            margin-top: -5px;
+            cursor: pointer;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: #44403c;
+            /* Stone 700 */
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden antialiased selection:bg-emerald-800 selection:text-white pb-10">
+
+    <div id="headphonePopup"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-500 p-6">
+        <div class="text-center animate-bounce-slow">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mx-auto text-stone-400 mb-6" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            </svg>
+            <h2 class="text-2xl font-serif text-white mb-2">Tedd be a fülest</h2>
+            <p class="text-stone-400 mb-8 font-light">Amit hallani fogsz, azt csak neked szánom.</p>
+            <button onclick="closePopup()"
+                class="px-8 py-3 border border-stone-600 rounded-full text-stone-300 hover:bg-stone-800 transition uppercase tracking-widest text-xs">
+                Jó na, bent van...
+            </button>
+        </div>
+    </div>
+
+    <section class="min-h-screen flex flex-col justify-center px-6 relative py-12">
+        <div
+            class="absolute inset-0 z-0 opacity-30 bg-[url('cover.jpg')] bg-cover bg-center filter grayscale contrast-125">
+        </div>
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-[#1c1917] via-[#1c1917]/80 to-[#1c1917]"></div>
+
+        <div class="z-10 relative max-w-md mx-auto w-full" data-aos="fade-up" data-aos-duration="1200">
+
+            <div class="flex justify-center mb-8 opacity-60">
+                <span class="text-2xl">☁️</span>
+            </div>
+
+            <h1 class="text-4xl font-bold mb-8 text-white italic leading-tight text-center serif-font">
+                Kedvesem...
+            </h1>
+
+            <div class="space-y-6 text-lg font-light leading-relaxed text-stone-300 text-justify">
+                <p>
+                    Igazad volt. Valóban szükségünk van erre a kis időre. Bennem kétely nem született, ellenben
+                    megerősödött az érzés, amit talán szemelől vesztettem.
+
+                    Köszönöm neked, hogy ezáltal eszembe juttattad azt a sok boldog pillanatot, amit egymásnak
+                    szereztünk.
+                </p>
+                <p>
+                    Annyira őröl a tudat, hogy képtelen vagyok magamban megmaradni. Valahogy muszáj elterelnem a
+                    gondolataim. Ha már
+                    álom nem jön a
+                    szememre, ebbe a kis projektbe fordítom minden kétségbeesésem és szeretetem.
+                </p>
+                <p>
+                    Ígértem, hogy tiszteletben tartom a kérésed és hagyok időt. De valahogy mégis tudatnom kell veled,
+                    mit is érzek valójában. Kérlek ennyit engedj meg.
+                </p>
+                <p class="text-sm text-stone-500 italic border-l-2 border-stone-600 pl-4 mt-6">
+                    Szeretném, hogy tudd: minden gondolatom őszinte és a szívem legmélyéről szól.
+                </p>
+            </div>
+
+            <div class="mt-16 text-center">
+                <p class="text-xs uppercase tracking-[0.3em] text-emerald-700/80 mb-3">Ami elválaszt bennünket</p>
+                <div id="countdown" class="text-3xl font-serif text-stone-200 tracking-widest">
+                    ...
+                </div>
+                <p class="text-xs text-stone-600 mt-2">december 23-ig</p>
+            </div>
+
+            <div class="mt-12 text-center animate-bounce opacity-30">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-4 mb-20 relative z-20" data-aos="fade-up">
+        <div class="max-w-md mx-auto glass-panel rounded-2xl p-6">
+
+            <div class="flex items-center gap-5 mb-6">
+                <div class="w-20 h-20 rounded-lg overflow-hidden shadow-lg flex-shrink-0 bg-stone-800">
+                    <img src="cover.jpg" alt="Cover" class="w-full h-full object-cover opacity-80">
+                </div>
+                <div>
+                    <h3 class="text-xl text-white font-serif tracking-wide">Zajban a csend</h3>
+                    <p class="text-stone-500 text-sm mt-1">Ganajtúró</p>
+                </div>
+            </div>
+
+            <audio id="audioPlayer" src="song.mp3"></audio>
+
+            <div class="flex flex-col gap-4">
+                <div class="w-full flex items-center gap-3 text-xs text-stone-500 font-mono">
+                    <span id="currentTime">0:00</span>
+                    <input type="range" id="progressBar" value="0" class="flex-grow">
+                    <span id="duration">0:00</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <button onclick="togglePlay()" id="playBtn"
+                        class="bg-stone-300 text-stone-900 w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition active:scale-95">
+                        <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden"
+                            viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 pb-24 max-w-md mx-auto text-center">
+        <h2 class="text-xs uppercase tracking-[0.2em] text-stone-500 mb-10">Dalszöveg</h2>
+
+        <div class="space-y-8 text-lg font-light tracking-wide text-stone-300 leading-8 font-serif">
+            <div class="italic text-stone-600 text-sm">(Intró)</div>
+
+            <div>
+                <p>Már megint ébren talál a hajnal,</p>
+                <p>Csak forgolódom, küzdök a zajjal.</p>
+                <p>A fejemben a gondolatok körbejárnak,</p>
+                <p>De az álmok nélküled hiába várnak.</p>
+                <p>Túl sok energiát adtam a világnak, a munkának,</p>
+                <p>És túl keveset hagytam meg... a babámnak.</p>
+                <p>Építettem a jövőt, de a jelent hagytam veszni,</p>
+                <p>Most félek, hogy késő már ezt jóvátenni.</p>
+            </div>
+
+            <div class="text-stone-100 font-normal">
+                <p>Mert gyakran nem érdemlem meg a türelmed,</p>
+                <p>De szeretném hinni, hogy még van miért küzdened.</p>
+                <p>Baba, a hiányod súlya a mellkasomon ül,</p>
+                <p>Nélküled a világom lassan elszürkül.</p>
+                <p>Hiányzik az érintésed, az őszinte mosolyod,</p>
+                <p>Ahogy a reggelt és az estét velem megosztod.</p>
+                <p>Olvadoznék kacagó szemeid ragyogásában…</p>
+                <p>Kérlek, ne hagyd veszni az álmunk, mire várunk.</p>
+            </div>
+
+            <div>
+                <p>Az utóbbi időben, tudom, nem úgy bántam veled,</p>
+                <p>Ahogy te, hercegnőm, azt igazán megérdemled.</p>
+                <p>Önző voltam, vak voltam, de látom már a hibát,</p>
+                <p>Te vagy, ki megtanítottad szeretni a világot s a csodát.</p>
+                <p>Most nélküled minden napom csak üresjárat,</p>
+                <p>Megrekedtem, s a lelkem utánad fárad.</p>
+                <p>Hallanám újra a gyermeki nevetésed hangját,</p>
+                <p>Hogy elűzze fejemben dörömbölő hiányod zaját.</p>
+            </div>
+
+            <div class="text-emerald-500/80 italic border-l border-emerald-900 pl-4 ml-4">
+                <p>Jobb akarok lenni.</p>
+                <p>Érted. Értünk.</p>
+                <p>Boldoggá akarlak tenni,</p>
+                <p>Újra karjaimban ölelni.</p>
+                <p>Bébibogyó, kedvesem, most látom csak igazán,</p>
+                <p>Hogy mennyire önző voltam szerelmünk kárán.</p>
+                <p>De hadd legyek jobb ember, ne engedd el a kezem,</p>
+                <p>Nélküled lelkem megrekedt, az otthonom kihalt.</p>
+                <p>Gyere haza hozzám, csitítsd el ezt a vihart...</p>
+            </div>
+
+            <div class="italic text-stone-600 text-sm">(Gitár: Vihar imitáció)</div>
+
+            <div class="mb-12">
+                <p>Nem hagy nyugodni a tudat...</p>
+                <p>De én várni fogok rád.</p>
+                <p>Itt leszek.</p>
+                <p>Várni fogok rád.</p>
+                <p>Szeretném hinni, hogy érdemes vagyok...</p>
+                <p>A szeretetedre.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-[#121212] border-t border-stone-800">
+        <div class="max-w-md mx-auto px-6">
+            <h2 class="text-lg font-serif text-center text-stone-400 mb-8 opacity-80" data-aos="fade-up">
+                Gondolatfoszlányok, vázlat</h2>
+
+            <div class="ios-note p-5 text-white" data-aos="fade-up">
+                <div class="ios-note-header flex justify-between items-center pb-3 mb-3">
+                    <div class="flex items-center text-yellow-500 gap-1 text-xs font-semibold">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                d="M15 19l-7-7 7-7" />
+                        </svg>
+                        Jegyzetek
+                    </div>
+                </div>
+
+                <div class="space-y-3 text-[15px] leading-snug opacity-90 font-light text-[#d1d1d1]">
+                    <p class="text-stone-500 text-xs text-center mb-3">Ma, 03:24</p>
+
+                    <p class="pl-2 text-lg border-l-2 border-yellow-500/30">Bogyónak</p>
+                    <p>Gyakran nem érdemlem meg a szerelmed és türelmed</p>
+                    <p>Szeretném hinni hogy érdemes vagyok a szeretetedre</p>
+                    <p>Nem hagy nyugodni a tudat hogy elveszítelek</p>
+                    <p>Nem tudok aludni, a gondolataim csak körülötted járnak</p>
+                    <p>Hiányzik az érintésed, az őszinte mosolyod és a gyermeki nevetésed hangja, miközben ragyogó
+                        szemeid víztükrében úszom</p>
+                    <p>Baba, hercegnőm, bébibogyó, kedvesem</p>
+                    <p>Az utóbbi időben nem abban a bánásmódban részesítettelek amit megérdemelnél</p>
+                    <p>Nem akarok többé önző lenni, boldoggá akarlak tenni</p>
+                    <p>Jobb akarok lenni, segíts kérlek, nélküled megrekedtem</p>
+                    <p>Hiányzik hogy reggel veled keljek és hiányzik hogy este veled nyugtázzam a napot</p>
+                    <p>Túl sok energiát fektettem a munkámba és túl keveset beléd</p>
+                    <p>Te vagy az aki megtanított engem újra szeretni</p>
+                    <p>Kérlek gyere haza hozzám, hagy bizonyítsam szerelmem</p>
+                    <p>Nélküled túl sok a zaj a fejemben, kérlek hallgattasd el</p>
+
+                    <p class="text-yellow-500 mt-4 pt-4 font-normal">Várok rád.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // 1. POPUP LOGIC
+        function closePopup() {
+            const popup = document.getElementById('headphonePopup');
+            popup.style.opacity = '0';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 500);
+        }
+
+        // 2. COUNTDOWN LOGIC (Target: Dec 23)
+        function updateCountdown() {
+            const now = new Date();
+            let targetYear = now.getFullYear();
+
+            // Ha már elmúlt idén dec 23, akkor jövőre (bár most 2025 van a prompt szerint, szóval idén)
+            const targetDate = new Date(targetYear, 11, 23, 0, 0, 0); // Month is 0-indexed (11 = Dec)
+
+            if (now > targetDate) {
+                targetDate.setFullYear(targetYear + 1);
+            }
+
+            const diff = targetDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById('countdown').innerHTML =
+                `${days} nap ${hours} óra`;
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Run immediately
+
+        // 3. AUDIO PLAYER LOGIC
+        const audio = document.getElementById('audioPlayer');
+        const playBtn = document.getElementById('playBtn');
+        const playIcon = document.getElementById('playIcon');
+        const pauseIcon = document.getElementById('pauseIcon');
+        const progressBar = document.getElementById('progressBar');
+        const currentTimeEl = document.getElementById('currentTime');
+        const durationEl = document.getElementById('duration');
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+                playIcon.classList.add('hidden');
+                pauseIcon.classList.remove('hidden');
+            } else {
+                audio.pause();
+                playIcon.classList.remove('hidden');
+                pauseIcon.classList.add('hidden');
+            }
+        }
+
+        audio.addEventListener('timeupdate', () => {
+            if (!isNaN(audio.duration)) {
+                const percent = (audio.currentTime / audio.duration) * 100;
+                progressBar.value = percent;
+
+                let currentMinutes = Math.floor(audio.currentTime / 60);
+                let currentSeconds = Math.floor(audio.currentTime % 60);
+                if (currentSeconds < 10) currentSeconds = "0" + currentSeconds;
+                currentTimeEl.innerText = `${currentMinutes}:${currentSeconds}`;
+            }
+        });
+
+        audio.addEventListener('loadedmetadata', () => {
+            let durationMinutes = Math.floor(audio.duration / 60);
+            let durationSeconds = Math.floor(audio.duration % 60);
+            if (durationSeconds < 10) durationSeconds = "0" + durationSeconds;
+            durationEl.innerText = `${durationMinutes}:${durationSeconds}`;
+        });
+
+        progressBar.addEventListener('input', () => {
+            const seekTime = (progressBar.value / 100) * audio.duration;
+            audio.currentTime = seekTime;
+        });
+    </script>
+</body>
+
+</html>
