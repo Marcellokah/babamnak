@@ -57,7 +57,7 @@
             border-bottom: 0.5px solid #38383a;
         }
 
-        /* Custom Audio Range Slider (Greenish) */
+        /* Custom Audio Range Slider */
         input[type=range] {
             -webkit-appearance: none;
             background: transparent;
@@ -85,7 +85,7 @@
     </style>
 </head>
 
-<body class="overflow-x-hidden antialiased selection:bg-emerald-800 selection:text-white pb-10">
+<body class="overflow-x-hidden antialiased selection:bg-emerald-800 selection:text-white">
 
     <div id="headphonePopup"
         class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-500 p-6">
@@ -106,7 +106,7 @@
 
     <section class="min-h-screen flex flex-col justify-center px-6 relative py-12">
         <div
-            class="absolute inset-0 z-0 opacity-30 bg-[url('cover.jpg')] bg-cover bg-center filter grayscale contrast-125">
+            class="absolute inset-0 z-0 opacity-30 bg-[url('paris.jpg')] bg-cover bg-center filter grayscale contrast-125">
         </div>
         <div class="absolute inset-0 z-0 bg-gradient-to-b from-[#1c1917] via-[#1c1917]/80 to-[#1c1917]"></div>
 
@@ -120,38 +120,46 @@
                 Kedvesem...
             </h1>
 
-            <div class="space-y-6 text-lg font-light leading-relaxed text-stone-300 text-justify">
+            <div class="space-y-6 text-lg font-normal leading-relaxed text-stone-300 text-justify">
                 <p>
                     Igazad volt. Valóban szükségünk van erre a kis időre. Bennem kétely nem született, ellenben
                     megerősödött az érzés, amit talán szemelől vesztettem.
-
                     Köszönöm neked, hogy ezáltal eszembe juttattad azt a sok boldog pillanatot, amit egymásnak
                     szereztünk.
                 </p>
                 <p>
-                    Annyira őröl a tudat, hogy képtelen vagyok magamban megmaradni. Valahogy muszáj elterelnem a
-                    gondolataim. Ha már
-                    álom nem jön a
-                    szememre, ebbe a kis projektbe fordítom minden kétségbeesésem és szeretetem.
+                    Annyira őröl a bűntudat, hogy képtelen vagyok magamban megmaradni. Valahogy muszáj elterelnem a
+                    gondolataim. Ha már álom nem jön a szememre, ebbe a kis projektbe fordítom minden kétségbeesésem és
+                    szeretetem.
                 </p>
                 <p>
-                    Ígértem, hogy tiszteletben tartom a kérésed és hagyok időt. De valahogy mégis tudatnom kell veled,
-                    mit is érzek valójában. Kérlek ennyit engedj meg.
+                    Ígértem, hogy tiszteletben tartom a kérésed és hagyok időt. De valahogy mégis tudatnom kell
+                    veled, mit is érzek valójában. Kérlek, ennyit engedj meg.
                 </p>
                 <p class="text-sm text-stone-500 italic border-l-2 border-stone-600 pl-4 mt-6">
                     Szeretném, hogy tudd: minden gondolatom őszinte és a szívem legmélyéről szól.
                 </p>
             </div>
 
-            <div class="mt-16 text-center">
-                <p class="text-xs uppercase tracking-[0.3em] text-emerald-700/80 mb-3">Ami elválaszt bennünket</p>
+            <div class="mt-12 text-center border-t border-stone-800 pt-8">
+                <p class="text-xs uppercase tracking-[0.3em] text-emerald-700/80 mb-3">Elválaszt bennünket</p>
                 <div id="countdown" class="text-3xl font-serif text-stone-200 tracking-widest">
                     ...
                 </div>
                 <p class="text-xs text-stone-600 mt-2">december 23-ig</p>
             </div>
 
-            <div class="mt-12 text-center animate-bounce opacity-30">
+            <div class="mt-10 text-center animate-pulse">
+                <p class="text-stone-400 font-serif italic text-lg leading-relaxed">
+                    Mivel többnyire érzelmi analfabéta vagyok... <br>
+                    ezért inkább megtanultam dalt írni.
+                </p>
+                <p class="text-xs text-emerald-600/70 mt-3 uppercase tracking-widest">
+                    Kérlek, figyelj minden sorára.
+                </p>
+            </div>
+
+            <div class="mt-8 text-center animate-bounce opacity-30">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -240,7 +248,7 @@
                 <p>Most nélküled minden napom csak üresjárat,</p>
                 <p>Megrekedtem, s a lelkem utánad fárad.</p>
                 <p>Hallanám újra a gyermeki nevetésed hangját,</p>
-                <p>Hogy elűzze fejemben dörömbölő hiányod zaját.</p>
+                <p>Hogy el&#369;zze fejemben dörömbölő hiányod zaját.</p>
             </div>
 
             <div class="text-emerald-500/80 italic border-l border-emerald-900 pl-4 ml-4">
@@ -271,7 +279,8 @@
     <section class="py-16 bg-[#121212] border-t border-stone-800">
         <div class="max-w-md mx-auto px-6">
             <h2 class="text-lg font-serif text-center text-stone-400 mb-8 opacity-80" data-aos="fade-up">
-                Gondolatfoszlányok, vázlat</h2>
+                Gondolatfoszlányok, vázlat
+            </h2>
 
             <div class="ios-note p-5 text-white" data-aos="fade-up">
                 <div class="ios-note-header flex justify-between items-center pb-3 mb-3">
@@ -311,6 +320,13 @@
         </div>
     </section>
 
+    <footer class="py-12 text-center text-stone-500 text-sm">
+        <p class="flex items-center justify-center gap-2">
+            Köszönöm, hogy meghallgattad!
+            <p>Szeretlek<span class="text-rose-600 text-lg">❤️</span></p>
+        </p>
+    </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -324,29 +340,24 @@
             }, 500);
         }
 
-        // 2. COUNTDOWN LOGIC (Target: Dec 23)
+        // 2. COUNTDOWN LOGIC
         function updateCountdown() {
             const now = new Date();
             let targetYear = now.getFullYear();
-
-            // Ha már elmúlt idén dec 23, akkor jövőre (bár most 2025 van a prompt szerint, szóval idén)
-            const targetDate = new Date(targetYear, 11, 23, 0, 0, 0); // Month is 0-indexed (11 = Dec)
+            const targetDate = new Date(targetYear, 11, 23, 0, 0, 0); // Dec 23
 
             if (now > targetDate) {
                 targetDate.setFullYear(targetYear + 1);
             }
 
             const diff = targetDate - now;
-
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 
-            document.getElementById('countdown').innerHTML =
-                `${days} nap ${hours} óra`;
+            document.getElementById('countdown').innerHTML = `${days} nap ${hours} óra`;
         }
         setInterval(updateCountdown, 1000);
-        updateCountdown(); // Run immediately
+        updateCountdown();
 
         // 3. AUDIO PLAYER LOGIC
         const audio = document.getElementById('audioPlayer');
